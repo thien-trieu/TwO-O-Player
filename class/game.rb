@@ -5,8 +5,9 @@ class Game
     # create players when create is initiated
     @player1 = Player.new
     @player2 = Player.new
-    # player 1 turn first
+    # player 1 turn first then alternate
     @turn = 1
+ 
   end 
 
   # start new turn after each player answer until a player runs out of lives
@@ -32,11 +33,8 @@ class Game
   end
 
   def update_lives(turn)
-    if turn === 1
-      @player1.lives -= 1
-    else 
-      @player2.lives -= 1
-    end
+    turn === 1 ?  @player1.lives -= 1 : @player2.lives -= 1
+
     # go to game over method when a play runs out of lives
     if @player1.lives === 0 || @player2.lives === 0
       game_over
