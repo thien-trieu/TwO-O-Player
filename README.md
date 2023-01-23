@@ -13,5 +13,5 @@ The game doesn’t end until one of the players loses all their lives. At this p
 
 # Instructions
 
-To begin: fork this repo and cd to `Two-O-Player` folder
-To start game: on your command line run `ruby main.rb`
+- To begin: fork this repo and cd to `Two-O-Player` folder
+- To start game: on your command line run `ruby main.rb`
