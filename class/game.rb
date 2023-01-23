@@ -28,12 +28,12 @@ class Game
   
   def update_turn(turn)
     turn === 1 ? @turn = 2 : @turn = 1
-    # go back to start a new round for next player
+    # go back to start a new round for next player turn
     start
   end
 
   def update_lives(turn)
-    turn === 1 ?  @player1.lives -= 1 : @player2.lives -= 1
+    turn === 1 ?  @player1.lose_a_life : @player2.lose_a_life
 
     # go to game over method when a play runs out of lives
     if @player1.lives === 0 || @player2.lives === 0
